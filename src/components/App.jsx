@@ -4,6 +4,8 @@ import { connect } from 'react-redux';
 import { addReminder, deleteReminder, clearReminders } from '../actions';
 import moment from 'moment';
 
+
+
 class App extends Component{
 
     constructor(props){
@@ -28,6 +30,7 @@ class App extends Component{
     renderReminders() {
         const { reminders } = this.props;
         return(
+            <div>
             <ul className = "list-group col-sm-4">
                 {
                     reminders.map( reminder => {
@@ -48,6 +51,9 @@ class App extends Component{
                     } )
                 }
             </ul>
+            
+            </div>
+
         )
     }
 
